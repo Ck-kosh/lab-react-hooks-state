@@ -1,4 +1,3 @@
-import { dark } from '@mui/material/styles/createPalette'
 import React from 'react'
 
 const DarkModeToggle = ({darkMode, toggleDarkMode}) => {
@@ -6,7 +5,7 @@ const DarkModeToggle = ({darkMode, toggleDarkMode}) => {
 
   return (
     <button onClick={toggleDarkMode}>
-      {darkMode ? 'Dark Mode' : 'Light Mode'}
+      {darkMode ? 'Toggle light Mode' : 'Toggle Dark Mode'}
     </button>
   )
 }

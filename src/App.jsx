@@ -20,8 +20,8 @@ const [cart, setCart] = useState([])
     setDarkMode(!darkMode)
   }
   // Add to cart function
-  const addToCart = (item) => {
-    setCart([...cart, item])
+  const addToCart = (product) => {
+    setCart([...cart, product])
   }
 
   return (
@@ -40,7 +40,7 @@ const [cart, setCart] = useState([])
 
       {/* TODO: Implement category filter dropdown */}
       <label>Filter by Category: </label>
-      <select value={category} onChange={(e) => setCategory(e.target.value)}>
+      <select onChange={(e) => setCategory(e.target.value)}>
         <option value="all">All</option>
         <option value="Fruits">Fruits</option>
         <option value="Dairy">Dairy</option>
