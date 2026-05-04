@@ -8,22 +8,23 @@ export const sampleProducts = [
 ]
 
 const ProductList = ({ category, addToCart }) => {
-  const filteredProducts = 
-  category === 'all' 
-  ? sampleProducts 
-  : sampleProducts.filter((product) => product.category === category)
+  const filteredProducts =
+    category === 'all'
+      ? sampleProducts
+      : sampleProducts.filter((p) => p.category === category)
 
   return (
     <div>
       <h2>Available Products</h2>
+      
       {filteredProducts.length === 0 ? (
         <p>No products available</p>
       ) : (
         filteredProducts.map((product) => (
-          <ProductCard 
+          <ProductCard
             key={product.id}
-            product={product} 
-            addToCart={addToCart} 
+            product={product}
+            addToCart={addToCart}
           />
         ))
       )}
@@ -31,4 +32,4 @@ const ProductList = ({ category, addToCart }) => {
   )
 }
 
-export default ProductList;
+export default ProductList

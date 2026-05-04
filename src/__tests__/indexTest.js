@@ -30,7 +30,7 @@ test('displays message when no products match filter', () => {
   const dropdown = screen.getByRole('combobox')
   fireEvent.change(dropdown, { target: { value: 'NonExistent' } })
 
-  expect(screen.getAllByText(/No products available/i)[0]).toBeInTheDocument()
+  expect(screen.queryAllByText(/No products available/i).length).toBeGreaterThan(0)
 })
 
 test('adds items to cart', () => {
