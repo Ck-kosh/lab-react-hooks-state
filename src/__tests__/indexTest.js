@@ -27,6 +27,7 @@ test('filters products by category', () => {
 
 test('displays message when no products match filter', () => {
   render(<App />)
+  
   const dropdown = screen.getByRole('combobox')
   fireEvent.change(dropdown, { target: { value: 'NonExistent' } })
 
