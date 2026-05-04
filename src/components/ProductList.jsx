@@ -31,4 +31,4 @@ const ProductList = ({ category, addToCart }) => {
   )
 }
 
-export default ProductList
+export default ProductList;
